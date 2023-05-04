@@ -11,4 +11,4 @@ COPY src src
 
 RUN ./gradlew bootJar --no-daemon
 
-ENTRYPOINT ["java", "-jar", "/app/build/libs/BookNook-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/build/libs/test-0.0.1-SNAPSHOT.jar"]
