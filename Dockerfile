@@ -1,8 +1,7 @@
 FROM eclipse-temurin:17-jdk-focal
 WORKDIR /app
-COPY build.gradle .
-COPY settings.gradle .
-COPY gradlew .
+COPY build.gradle settings.gradle gradlew ./
+COPY gradle/ ./gradle/
 RUN ./gradlew build --no-daemon
 COPY src src
 RUN ./gradlew bootJar --no-daemon
