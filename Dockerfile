@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY build.gradle settings.gradle gradlew ./
 COPY gradle/ ./gradle/
-RUN ./gradlew bootJar --no-daemon
+RUN ./gradlew bootJar
 
 COPY /build/libs/BookNook-0.0.1-SNAPSHOT.jar /app.jar
 
